@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aeratliff.com - KQL Deep URL Redirect</title>
+	<!-- External CSS start -->
+	<link rel="stylesheet" href="../css/theme1.css">
+	<!-- External CSS stop -->
+</head>
+<body>
+    <div class="container">
+		<h1>KQL Deep URL Redirect</h1>
+		<!-- Form -->
+		<form id="data_formatting" method="post">
+
+			<label for="tid">Tenant ID:</label>
+			<input type="text" id="tid" name="tid" required>
+			
+			<label for="lawid">Log Analytics Workspace ID:</label>
+			<input type="text" id="lawid" name="lawid" required>
+
+			<label for="kql">KQL:</label>
+			<textarea id="kql" name="kql" rows="30" placeholder="Paste any KQL to be encoded.  This form is intended to be called via query string parameters through the use of a custom browser search engine in order to expedite KQL searches on the fly, however manual form submission exists if you want to do that for some reason." required></textarea>
+			<!-- Web API submission (button) start -->
+			<button type="button" onclick="submitToAPI(event)">Submit</button>
+			<!-- Web API submission (button) stop -->
+		</form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 aeratliff.com. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aeratliff.com - Dummy Data Generator</title>
+	<!-- External CSS start -->
+	<link rel="stylesheet" href="../css/theme1.css">
+	<!-- External CSS stop -->
+</head>
+<body>
+    <div class="container">
+		<h1>Dummy Data Generator</h1>
+		<!-- Form -->
+		<form id="data_formatting" method="post">
+
+			<label for="quantity">Record Quantity:</label>
+			<input type="text" id="quantity" name="quantity" required>
+			
+			<p>Record Types:</p>
+			<!-- div method
+			<div class="checkbox-group">
+			-->
+			<table width="100%">
+				<tr>
+					<td>
+						<label for="ipv4address">IPv4 Addr</label>
+						<input type="checkbox" id="ipv4address" name="ipv4address" value="">
+					</td>
+					<td>
+						<label for="ipv46ddress">IPv6 Add</label>
+						<input type="checkbox" id="ipv6address" name="ipv6address" value="false">
+					</td>
+					<td>
+						<label for="ipv4netblock">IPv4 Net</label>
+						<input type="checkbox" id="ipv4netblock" name="ipv4netblock" value="false">
+					</td>
+					<td>
+						<label for="ipv6netblock">IPv6 Net</label>
+						<input type="checkbox" id="ipv6netblock" name="ipv6netblock" value="false">
+					</td>
+					<td>
+						<label for="macaddress">MAC Addr</label>
+						<input type="checkbox" id="macaddress" name="macaddress" value="false">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="phone">Phone</label>
+						<input type="checkbox" id="phone" name="phone" value="false">
+					</td>
+					<td>
+						<label for="fqdn">FQDN</label>
+						<input type="checkbox" id="fqdn" name="fqdn" value="false">
+					</td>
+					<td>
+						<label for="url">URL</label>
+						<input type="checkbox" id="url" name="url" value="false">
+					</td>
+					<td>
+						<label for="sha256">SHA256</label>
+						<input type="checkbox" id="sha256" name="sha256" value="false">
+					</td>
+					<td>
+						<label for="sha1">SHA1</label>
+						<input type="checkbox" id="sha1" name="sha1" value="false">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="md5">MD5</label>
+						<input type="checkbox" id="md5" name="md5" value="false">
+					</td>
+					<td>
+						<label for="upn">UPN/SMTP Addr</label>
+						<input type="checkbox" id="upn" name="upn" value="false">
+					</td>
+					<td>
+						<label for="samaccount">SAMAccount</label>
+						<input type="checkbox" id="samaccount" name="samaccount" value="false">
+					</td>
+					<td>
+						<label for="sid">SID</label>
+						<input type="checkbox" id="sid" name="sid" value="false">
+					</td>
+					<td>
+						<label for="guid">GUID</label>
+						<input type="checkbox" id="guid" name="guid" value="false">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label for="abspath">Absolute Path</label>
+						<input type="checkbox" id="abspath" name="abspath" value="false">
+					</td>
+					<td>
+						<label for="Filename">Filename</label>
+						<input type="checkbox" id="filename" name="filename" value="false">
+					</td>
+					<td>
+						<label for="datetimestamp">Date/Time</label>
+						<input type="checkbox" id="datetimestamp" name="datetimestamp" value="false">
+					</td>
+					<td>
+						<label for="ssn">SSN</label>
+						<input type="checkbox" id="ssn" name="ssn" value="false">
+					</td>
+					<td>
+						<label for="name">Full Name</label>
+						<input type="checkbox" id="name" name="name" value="false">
+					</td>
+				</tr>
+			</table>
+			<!-- div method
+			</div>
+			-->
+
+			<label for="outputformat">Desried Output Format:</label>
+			<select id="outputformat" name="outputformat">
+				<option value="table">HTML Table</option>
+				<option value="textcsvsq">Text - CSV, Single Quote</option>
+				<option value="textcsvdq">Text - CSV, Double Quote</option>
+				<option value="textlistcssq">Text - List, Comma Separated, Single Quote</option>
+				<option value="textlistcsdq">Text - List, Comma Separated, Double Quote</option>
+				<option value="textlistcsnq">Text - List, Comma Separated, No Quote</option>
+				<option value="textlistsssq">Text - List, Space Separated, Single Quote</option>
+				<option value="textlistssdq">Text - List, Space Separated, Double Quote</option>
+				<option value="textlistssnq">Text - List, Space Separated, No Quote</option>
+				<option value="textlistlssq">Text - List, Line Separated, Single Quote</option>
+				<option value="textlistlsdq">Text - List, Line Separated, Double Quote</option>
+				<option value="textlistlsnq">Text - List, Line Separated, No Quote</option>
+			</select>
+			
+			<label for="macformat">MAC Output Format:</label>
+			<select id="macformat" name="macformat">
+				<option value="colon">: (Colon)</option>
+				<option value="hyphen">- (Hyphen)</option>
+				<option value="period">. (Period)</option>
+				<option value="space">  (Space)</option>
+				<option value="retain">Retain Origin</option>
+			</select>
+
+			<label for="phoneformat">Phone Output Format:</label>
+			<select id="phoneformat" name="phoneformat">
+				<option value="nosep">No Separation Characters (ex: 11234567890)</option>
+				<option value="sep">Add Standard Separation Characters (ex: +1(123)456-7890</option>
+				<option value="dotsep">Add Period Separation Characters (ex: 1.123.456.7890)</option>
+				<option value="retain">Retain Origin</option>
+			</select>
+
+			<label for="caseconversion">Case Output Format:</label>
+			<select id="caseconversion" name="caseconversion">
+				<option value="lower">lower case</option>
+				<option value="upper">UPPER CASE</option>
+				<option value="title">Title Case</option>
+				<option value="lowerflat">lowerflatcase</option>
+				<option value="upperflat">UPPERFLATCASE</option>
+				<option value="camel">camelCase</option>
+				<option value="pascal">PascalCase</option>
+				<option value="snake">snake_case</option>
+				<option value="camelsnake">camel_Snake_Case</option>
+				<option value="pascalsnake">Pascal_Snake_Case</option>
+				<option value="kebab">kebab-case</option>
+				<option value="retain">Retain Origin</option>
+			</select>
+			
+			<hr />
+			
+			<!-- Web API submission (button) start -->
+			<button type="button" onclick="submitToAPI(event)">Submit</button>
+			<!-- Web API submission (button) stop -->
+		</form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 aeratliff.com. All rights reserved.</p>
+    </footer>
+</body>
+</html>

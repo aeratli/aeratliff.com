@@ -1,0 +1,181 @@
+/* General page styling */
+body {
+	font-family: Arial, sans-serif;
+	background-image: url('../img/bg_inverted.jpg');
+	background-color: #f4f4f4; /* Light gray background */
+	color: black;
+	margin: 0;
+	padding: 0;
+}
+
+/* Container to limit page width and add margin */
+.container {
+	width: 80%;
+	max-width: 1200px;
+	margin: 0 auto; /* Centers the content on the page */
+	padding: 20px;
+}
+
+/* Tab Container */
+.tabs {
+	display: flex;
+	background-color: #333; /* Dark gray background for the tabs */
+	margin: 0;
+	padding: 10px 0;
+	/* border-radius: 8px; */
+}
+
+/* Tab Styling */
+.tab {
+	flex: 1;
+	padding: 15px 0;
+	text-align: center;
+	background-color: #555; /* Medium gray for inactive tabs */
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+/* Active tab style */
+.tab.active {
+	background-color: #333; /* Dark gray for active tab */
+}
+
+/* Tab Hover Effect */
+.tab:hover {
+	background-color: #444; /* Slightly lighter gray on hover */
+}
+
+/* Content Section Styling */
+.tab-content {
+	display: none;
+	padding: 20px;
+	background-color: #d3d3d3; /* Ash gray for content sections */
+	margin-top: 20px;
+	border-radius: 8px;
+}
+
+/* Active content display */
+.tab-content.active {
+	display: block;
+}
+
+/* Heading Styling */
+h1 {
+	font-size: 24px;
+	color: black;
+}
+
+/* Paragraph Styling */
+p {
+	font-size: 18px;
+	color: black;
+}
+
+/* Blog Posts Styling */
+.post {
+	background-color: #e0e0e0; /* Light gray for post background */
+	padding: 20px;
+	margin: 20px 0;
+	border-radius: 8px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+	font-size: 22px;
+	color: #333;
+}
+
+.post p {
+	font-size: 16px;
+	color: #555;
+}
+
+/* Specific styles for the Projects tab (split sections) */
+.projects-section {
+	display: flex;
+	gap: 20px;
+}
+
+.projects-left, .projects-right {
+	flex: 1;
+	background-color: #e0e0e0; /* Light gray for left/right sections */
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.projects-left h2, .projects-right h2 {
+	font-size: 20px;
+	color: #333;
+}
+
+.projects-left ul, .projects-right ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.projects-left li, .projects-right li {
+	margin: 10px 0;
+}
+
+.projects-left a, .projects-right a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+.projects-left a:hover, .projects-right a:hover {
+	text-decoration: underline;
+}
+
+/* Form Styling */
+form {
+	background-color: #e0e0e0;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea {
+	width: 99%;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	font-size: 16px;
+}
+
+input, select {
+	display: block;
+}
+
+.checkbox-group {
+	display: flex;
+	flex-direction: row;
+	gap: 10px; /* Optional: Adds space between checkboxes */
+}
+
+button {
+	background-color: #333;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 16px;
+}
+
+button:hover {
+	background-color: #444;
+}
+
+/* Footer Styling */
+footer {
+	background-color: #222; /* Black footer */
+	color: white;
+	text-align: center;
+	padding: 0px;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+}

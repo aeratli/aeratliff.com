@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aeratliff.com - Data Formatting, Parsing, & Extraction</title>
+	<!-- External CSS start -->
+	<link rel="stylesheet" href="../css/theme1.css">
+	<!-- External CSS stop -->
+</head>
+<body>
+    <div class="container">
+		<h1>Data Formatting, Parsing, & Extraction</h1>
+		<!-- Form -->
+		<form id="data_formatting" method="post">
+
+			<label for="outputformat">Desried Output Format:</label>
+			<select id="outputformat" name="outputformat">
+				<option value="table">HTML Table</option>
+				<option value="textcsvsq">Text - CSV, Single Quote</option>
+				<option value="textcsvdq">Text - CSV, Double Quote</option>
+				<option value="textlistcssq">Text - List, Comma Separated, Single Quote</option>
+				<option value="textlistcsdq">Text - List, Comma Separated, Double Quote</option>
+				<option value="textlistcsnq">Text - List, Comma Separated, No Quote</option>
+				<option value="textlistsssq">Text - List, Space Separated, Single Quote</option>
+				<option value="textlistssdq">Text - List, Space Separated, Double Quote</option>
+				<option value="textlistssnq">Text - List, Space Separated, No Quote</option>
+				<option value="textlistlssq">Text - List, Line Separated, Single Quote</option>
+				<option value="textlistlsdq">Text - List, Line Separated, Double Quote</option>
+				<option value="textlistlsnq">Text - List, Line Separated, No Quote</option>
+			</select>
+			
+			<label for="macformat">MAC Output Format:</label>
+			<select id="macformat" name="macformat">
+				<option value="colon">: (Colon)</option>
+				<option value="hyphen">- (Hyphen)</option>
+				<option value="period">. (Period)</option>
+				<option value="space">  (Space)</option>
+				<option value="retain">Retain Origin</option>
+			</select>
+
+			<label for="phoneformat">Phone Output Format:</label>
+			<select id="phoneformat" name="phoneformat">
+				<option value="nosep">No Separation Characters (ex: 11234567890)</option>
+				<option value="sep">Add Standard Separation Characters (ex: +1(123)456-7890</option>
+				<option value="dotsep">Add Period Separation Characters (ex: 1.123.456.7890)</option>
+				<option value="retain">Retain Origin</option>
+			</select>
+
+			<label for="caseconversion">Case Output Format:</label>
+			<select id="caseconversion" name="caseconversion">
+				<option value="lower">lower case</option>
+				<option value="upper">UPPER CASE</option>
+				<option value="title">Title Case</option>
+				<option value="lowerflat">lowerflatcase</option>
+				<option value="upperflat">UPPERFLATCASE</option>
+				<option value="camel">camelCase</option>
+				<option value="pascal">PascalCase</option>
+				<option value="snake">snake_case</option>
+				<option value="camelsnake">camel_Snake_Case</option>
+				<option value="pascalsnake">Pascal_Snake_Case</option>
+				<option value="kebab">kebab-case</option>
+				<option value="retain">Retain Origin</option>
+			</select>
+			
+			<hr />
+			
+			<label for="rawdata">Raw Data:</label>
+			<textarea id="rawdata" name="rawdata" rows="30" placeholder="Paste any data to be formatted according to the above output format options.  This script will attempt to extract relevant IT/security pieces of information from the supplied data & output below.&#10;&#10;Some use cases and intended data types include:&#10;IPv4 Addresses&#10;IPv6 Addresses&#10;IPv4 Netblocks&#10;IPv6 Netblocks&#10;MAC Addresses&#10;Phone Numbers&#10;FQDNs&#10;URLs&#10;SHA256&#10;SHA1&#10;MD5&#10;SMTP addresses/UPNs&#10;Down-level Logins/SAMAccountNames&#10;SIDs&#10;GUIDs&#10;Absolute File Paths (Windows & Linux)&#10;Full File Names + Extensions&#10;Date/Timestamps&#10;Social Security #s&#10;Names" required></textarea>
+			<!-- Web API submission (button) start -->
+			<button type="button" onclick="submitToAPI(event)">Submit</button>
+			<!-- Web API submission (button) stop -->
+		</form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 aeratliff.com. All rights reserved.</p>
+    </footer>
+</body>
+</html>

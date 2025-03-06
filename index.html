@@ -1,422 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aeratliff.com</title>
-    <style>
-        /* General page styling */
-        body {
-            font-family: Arial, sans-serif;
-			background-image: url('assets/img/bg_inverted.jpg');
-            background-color: #f4f4f4; /* Light gray background */
-            color: black;
-            margin: 0;
-            padding: 0;
-        }
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>aeratliff.com</title>
+		<link rel="stylesheet" href="assets/css/theme1.css">
+	</head>
+	<body>
+		<header>
+			<!-- Placeholder for banner image/branding -->
+		</header>
+		<nav>
+			<div class="tabs">
+				<div class="tab active" id="notes-tab">Notes</div>
+				<div class="tab" id="projects-tab">Projects</div>
+				<div class="tab" id="about-tab">About</div>
+				<div class="tab" id="contact-tab">Contact</div>
+			</div>
+		</nav>
+		<div class="container">
 
-        /* Container to limit page width and add margin */
-        .container {
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto; /* Centers the content on the page */
-            padding: 20px;
-        }
+			<!-- Tab Content Sections -->
 
-        /* Tab Container */
-        .tabs {
-            display: flex;
-            background-color: #333; /* Dark gray background for the tabs */
-            margin: 0;
-            padding: 10px 0;
-            border-radius: 8px;
-        }
+			<!-- Notes Tab -->
+			<div class="tab-content active" id="notes-content">
+				<h1>Notes</h1>
+				<div class="post">
+					<h2>Post #1</h2>
+					<p>This post is a temporary placeholder and could discuss something like setting up a safe environment for malware analysis. Topics might include virtual machines, network isolation, and automation for testing.</p>
+					<p><a href="#">Read more...</a></p>
+				</div>
+				<div class="post">
+					<h2>Post #2</h2>
+					<p>This post is a temporary placeholder and could cover how to configure custom DNS for a vanity email addresses. You might learn about setting up MX records, DNSSEC, and security measures.</p>
+					<p><a href="#">Read more...</a></p>
+				</div>
+				<div class="post">
+					<h2>Post #3</h2>
+					<p>This post is a temporary placeholder and could focuses on creating smart home automations using various Home Assistants, IFTTT, including device setup, automation scripting, and integration with other third-party services.</p>
+					<p><a href="#">Read more...</a></p>
+				</div>
+				<div class="post">
+					<h2>Post #4</h2>
+					<p>This post is a temporary placeholder and you could learn how to build a simple CSS-based keylogger demo for educational purposes. This post might explore the concept of client-side tracking.</p>
+					<p><a href="#">Read more...</a></p>
+				</div>
+			</div>
 
-        /* Tab Styling */
-        .tab {
-            flex: 1;
-            padding: 15px 0;
-            text-align: center;
-            background-color: #555; /* Medium gray for inactive tabs */
-            color: white;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+			<!-- Projects Tab -->
+			<div class="tab-content" id="projects-content">
+				<h1>Projects</h1>
+				<p>This section showcases a variety of projects I have worked on, ranging from technical research and home lab projects to personal-use tools I have developed.</p>
 
-        /* Active tab style */
-        .tab.active {
-            background-color: #222; /* Dark gray for active tab */
-        }
+				<!-- Split the content into two sections: Left and Right -->
+				<div class="projects-section">
+					<!-- Left Section: Home Lab & Research Projects -->
+					<div class="projects-left">
+						<h2>Home Lab & Research Projects</h2>
+						<ul>
+							<li><a href="#">How to Configure a Malware Analysis Test Lab</a></li>
+							<li><a href="#">Configuring a Custom Vanity Email DNS Domain</a></li>
+							<li><a href="#">Home Assistant Automations</a></li>
+							<li><a href="#">CSS Keylogger Demo</a></li>
+							<li><a href="#">Cross-Origin Resource Sharing Session Hijacking Demo</a></li>
+							<li><a href="#">Cross-Site Request Forgery Sharing Session Hijacking Demo</a></li>
+							<li><a href="#">Contracted Website Work Product Example Links</a></li>
+						</ul>
+					</div>
 
-        /* Tab Hover Effect */
-        .tab:hover {
-            background-color: #444; /* Slightly lighter gray on hover */
-        }
+					<!-- Right Section: Personal Use Tools -->
+					<div class="projects-right">
+						<h2>Personal Use Tools</h2>
+						<ul>
+							<li><a href="#">Server Side Network Survey Tool</a></li>
+							<li><a href="#">Client Side Browser Survey</a></li>
+							<li><a href="assets/pages/data_formatting.html">Data Parsing & Normalization App</a></li>
+							<li><a href="assets/pages/time_conversion">Time Conversion Tool</a></li>
+							<li><a href="#">Scripting Language Syntax Translator</a></li>
+							<li><a href="#">Analytics Query Language Syntax Translator</a></li>
+							<li><a href="assets/kql_deep_url.html">KQL Deep URL Encoder & Redirector</a></li>
+							<li><a href="assets/pages/whois.html">Domain & Network WHOIS & IP Geolocation Query Tool</a></li>
+							<li><a href="assets/pages/subnet.html">Subnet/Supernet Calculator</a></li>
+							<li><a href="assets/pages/dummy_data_gen.html">Dummy Data Generator</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 
-        /* Content Section Styling */
-        .tab-content {
-            display: none;
-            padding: 20px;
-            background-color: #d3d3d3; /* Ash gray for content sections */
-            margin-top: 20px;
-            border-radius: 8px;
-        }
+			<!-- About Tab -->
+			<div class="tab-content" id="about-content">
+				<h1>About</h1>
+				<p>Born and raised on the island of Oahu, Hawaii, Anthony's fascination with technology began early, with an interest in web design, 3D modeling, and media production. Entering high school, he was among the first generation to participate in his alma mater's pilot Cisco CCNA/P and A+ prep course programs, igniting a lifelong passion for the world of IT and cybersecurity.</p>
+				<p>Pursuing a deeper understanding of technology, he enrolled in college, majoring in Information & Computer Sciences with a focus on Software Engineering and Data Structures. During this time, he honed his skills in software development, networking, and systems engineering.</p>
+				<p>Eager to put his newly acquired skills to the test, Anthony enlisted in the United States Air Force, where they served for 10 years as a Network Intelligence Analyst. Their assignments spanned 11 geographically distinct and operationally unique missions across the US, including Joint-Base Pearl Harbor-Hickam, HI, Pensacola, FL, Ft. Meade, MD, & Ft. Gordon, GA among several others, providing invaluable experience in IT foundations, cybersecurity, and military intelligence. These diverse assignments helped shape his expertise in both the technical and strategic elements of cybersecurity.</p>
+				<p>To provide a more stable family life, he transitioned out of the Active Duty Air Force into the Air National Guard where he continued his service in the Cyber Intelligence domain while pursuing civilian cybersecurity roles. Based in the East Bay Area and later the greater Sacramento area, he worked in various blue/purple team cybersecurity roles within the healthcare and managed service security provider (MSSP) sectors, leading critical cybersecurity operations and incident response teams.</p>
+				<p>Some of Anthony's unclassified key exploits include:</p>
+				<ul>
+					<li>Security Operations Lead: Designing, implementing, and managing security stacks across all security domains, integrating tools with SIEM and SOAR platforms, and creating efficient workflows to streamline incident response.</li>
+					<li>SIEM-SOAR Lead: Leading the design, implementation, and tuning of SIEM infrastructure, including migrating from Splunk to Microsoft Sentinel while minimizing impact to legacy systems. Anthony introduced AI-based analytics and self-tuning SIEM processes to optimize threat detection and response.</li>
+					<li>SOC Incident Response Lead: Developing engineering-centric processes for SOC teams, ensuring effective incident triage and response through a combination of training, tooling, and coordination with stakeholders.</li>
+					<li>Email Security Operations Lead: Managing the security of a 25K mailbox MS365 Exchange hybrid environment, implementing advanced email security tools, and leading email domain brand protection initiatives, including DMARC reporting and email relay remediation.</li>
+					<li>Endpoint Security Operations Lead: Overseeing the security and compliance of a mixed Windows/Linux environment, swapping legacy security tools for more efficient and cost-effective solutions like Microsoft Defender for Endpoint, while addressing compliance gaps and endpoint security issues.</li>
+					<li>Cloud Security Operations Lead: Leading the implementation of Azure and AWS resources, integrating cloud security policies, and supporting cloud migration efforts while improving security posture and disaster recovery capabilities.</li>
+					<li>TVM Lead: Managing vulnerability management tools like Rapid7 InsightVM, ensuring continuous vulnerability scanning and remediation for 25K assets, and spearheading penetration testing and vulnerability management efforts.</li>
+				</ul>
+				<p>With a strong background in systems and security engineering, he has developed expertise in a wide range of tools and technologies, including SIEM-SOAR platforms, endpoint security, email and identity management, vulnerability management, and cloud security. They are well-versed in working with organizations across various industries, particularly healthcare, to provide robust cybersecurity solutions and strategies that meet complex compliance requirements.</p>
+				<p>Anthony has a deep technical knowledge base, which includes working with systems like Splunk ES, Microsoft Sentinel, Azure Defender for Cloud, Cisco Firepower, Rapid7 InsightVM, and more. Additionally, their proficiency in programming and scripting languages, such as Python, Powershell, Bash, and SQL, ensures they can build, maintain, and optimize cybersecurity workflows tailored to each organization’s unique needs.</p>
+				<p>Beyond their technical prowess, Anthony remains committed to fostering a proactive cybersecurity culture, focusing on education, team training, and process optimization to ensure organizations remain secure against evolving threats. Their career continues to be driven by a passion for technology, a desire for ongoing learning, and a dedication to securing the digital world for the next generation.</p>
+			</div>
 
-        /* Active content display */
-        .tab-content.active {
-            display: block;
-        }
+			<!-- Contact Tab -->
+			<div class="tab-content" id="contact-content">
+				<h1>Contact</h1>
+				<p>If you'd like to get in touch with me, please fill out the form below:</p>
 
-        /* Heading Styling */
-        h1 {
-            font-size: 24px;
-            color: black;
-        }
+				<!-- Contact Form -->
+				<!-- OS Mail Client (form) start
+				<form action="mailto:address@domain.com" method="post" enctype="text/plain">
+				OS Mail Client (form) stop -->
+				<!-- Web API submission (form) start -->
+				<form id="contact" method="post">
+				<!-- Web API submission (form) stop -->
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" required>
+					
+					<label for="affiliation">Affiliation/Company:</label>
+					<input type="text" id="affiliation" name="affiliation" required>
+					
+					<label for="email">Email Address:</label>
+					<input type="email" id="email" name="email" required>
 
-        /* Paragraph Styling */
-        p {
-            font-size: 18px;
-            color: black;
-        }
+					<label for="phone">Phone Number:</label>
+					<input type="tel" id="phone" name="phone">
 
-        /* Blog Posts Styling */
-        .post {
-            background-color: #e0e0e0; /* Light gray for post background */
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 8px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        }
+					<label for="contactmethod">Preferred Contact Method:</label>
+					<select id="contactmethod" name="contactmethod">
+						<option value="email">Email</option>
+						<option value="phone">Phone - Call</option>
+						<option value="phone">Phone - SMS</option>
+					</select>
 
-        .post h2 {
-            font-size: 22px;
-            color: #333;
-        }
+					<hr />
 
-        .post p {
-            font-size: 16px;
-            color: #555;
-        }
+					<label for="subject">Subject:</label>
+					<input type="text" id="subject" name="subject" required>
 
-        /* Specific styles for the Projects tab (split sections) */
-        .projects-section {
-            display: flex;
-            gap: 20px;
-        }
+					<label for="message">Message:</label>
+					<textarea id="message" name="message" rows="5" placeholder="Please share any questions, comments, or feedback." required></textarea>
 
-        .projects-left, .projects-right {
-            flex: 1;
-            background-color: #e0e0e0; /* Light gray for left/right sections */
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        }
+					<!-- OS Mail Client (button) start
+					<button type="submit">Submit</button>
+					OS Mail Client (button) stop -->
+					<!-- Web API submission (button) start -->
+					<button type="button" onclick="submitToAPI(event)">Submit</button>
+					<!-- Web API submission (button) stop -->
+				</form>
+			</div>
 
-        .projects-left h2, .projects-right h2 {
-            font-size: 20px;
-            color: #333;
-        }
+		</div>
 
-        .projects-left ul, .projects-right ul {
-            list-style-type: none;
-            padding: 0;
-        }
+		<footer>
+			<p>&copy; 2025 aeratliff.com. All rights reserved.</p>
+		</footer>
 
-        .projects-left li, .projects-right li {
-            margin: 10px 0;
-        }
+		<!-- Tab Navigation -->
+		<script>
+			// Get all tab elements and content sections
+			const tabs = document.querySelectorAll('.tab');
+			const contents = document.querySelectorAll('.tab-content');
 
-        .projects-left a, .projects-right a {
-            color: #007bff;
-            text-decoration: none;
-        }
+			// Function to handle tab switching
+			tabs.forEach(tab => {
+				tab.addEventListener('click', () => {
+					// Remove the 'active' class from all tabs and content sections
+					tabs.forEach(t => t.classList.remove('active'));
+					contents.forEach(c => c.classList.remove('active'));
 
-        .projects-left a:hover, .projects-right a:hover {
-            text-decoration: underline;
-        }
-
-        /* Form Styling */
-        form {
-            background-color: #e0e0e0;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        input, textarea {
-            width: 99%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
-
-        button {
-            background-color: #333;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        button:hover {
-            background-color: #444;
-        }
-		
-        /* Footer Styling */
-        footer {
-            background-color: #222; /* Black footer */
-            color: white;
-            text-align: center;
-            padding: 0px;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-
-        <!-- Tab Navigation -->
-        <div class="tabs">
-            <div class="tab active" id="notes-tab">Notes</div>
-            <div class="tab" id="projects-tab">Projects</div>
-            <div class="tab" id="about-tab">About</div>
-            <div class="tab" id="contact-tab">Contact</div>
-        </div>
-
-        <!-- Tab Content Sections -->
-		
-		<!-- Notes Tab -->
-        <div class="tab-content active" id="notes-content">
-            <h1>Notes</h1>
-            <div class="post">
-                <h2>How to Set Up a Malware Analysis Lab</h2>
-                <p>This post discusses setting up a safe environment for malware analysis. Topics include virtual machines, network isolation, and automation for testing.</p>
-            </div>
-            <div class="post">
-                <h2>Configuring a Vanity Email DNS Domain</h2>
-                <p>In this post, we cover how to configure custom DNS for a vanity email address. Learn about setting up MX records, DNSSEC, and security measures.</p>
-            </div>
-            <div class="post">
-                <h2>Home Automation with Home Assistant</h2>
-                <p>This tutorial focuses on creating smart home automations using Home Assistant, including device setup, automation scripting, and integration with third-party services.</p>
-            </div>
-            <div class="post">
-                <h2>Building a CSS Keylogger Demo</h2>
-                <p>Learn how to build a simple CSS-based keylogger demo for educational purposes. This post explores the concept of client-side tracking.</p>
-            </div>
-        </div>
-
-		<!-- Projects Tab -->
-        <div class="tab-content" id="projects-content">
-            <h1>Projects</h1>
-            <p>This section showcases a variety of projects I have worked on, ranging from technical research and home lab projects to personal-use tools I have developed.</p>
-
-            <!-- Split the content into two sections: Left and Right -->
-            <div class="projects-section">
-                <!-- Left Section: Home Lab & Research Projects -->
-                <div class="projects-left">
-                    <h2>Home Lab & Research Projects</h2>
-                    <ul>
-                        <li><a href="#">How to Configure a Malware Analysis Test Lab</a></li>
-                        <li><a href="#">Configuring a Custom Vanity Email DNS Domain</a></li>
-                        <li><a href="#">Home Assistant Automations</a></li>
-                        <li><a href="#">CSS Keylogger Demo</a></li>
-                        <li><a href="#">Cross-Origin Resource Sharing Session Hijacking Demo</a></li>
-                        <li><a href="#">Cross-Site Request Forgery Sharing Session Hijacking Demo</a></li>
-                        <li><a href="#">Contracted Website Work Product Example Links</a></li>
-                    </ul>
-                </div>
-
-                <!-- Right Section: Personal Use Tools -->
-                <div class="projects-right">
-                    <h2>Personal Use Tools</h2>
-                    <ul>
-                        <li><a href="#">Server Side Network Survey Tool</a></li>
-                        <li><a href="#">Client Side Browser Survey</a></li>
-                        <li><a href="#">Data Parsing & Normalization App</a></li>
-                        <li><a href="#">Time Conversion Tool</a></li>
-                        <li><a href="#">Scripting Language Syntax Translator</a></li>
-                        <li><a href="#">Analytics Query Language Syntax Translator</a></li>
-                        <li><a href="#">KQL Deep URL Encoder & Redirector</a></li>
-                        <li><a href="#">Domain & Network WHOIS & IP Geolocation Query Tool</a></li>
-                        <li><a href="#">Subnet/Supernet Calculator</a></li>
-                        <li><a href="#">IOC Parser/Extractor from Bulk Text Data Tool</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-		<!-- About Tab -->
-        <div class="tab-content" id="about-content">
-            <h1>About</h1>
-            <p>This is the About section. Here, you can learn more about the website, its purpose, and the team behind it.</p>
-        </div>
-
-		<!-- Contact Tab -->
-        <div class="tab-content" id="contact-content">
-            <h1>Contact</h1>
-            <p>If you'd like to get in touch with me, please fill out the form below:</p>
-
-            <!-- Contact Form -->
-			<!--This form tag for deferral to OS mail client
-            <form action="mailto:address@domain.com" method="post" enctype="text/plain">
-			-->
-			<!-- This form tag for entirely web-based/browser submission workflow -->
-			<form id="contact" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-				
-                <label for="affiliation">Affiliation/Company:</label>
-                <input type="text" id="affiliation" name="affiliation" required>
-				
-				<label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
-
-                <label for="contactmethod">Preferred Contact Method:</label>
-                <select id="contactmethod" name="contactmethod">
-                    <option value="email">Email</option>
-                    <option value="phone">Phone - Call</option>
-                    <option value="phone">Phone - SMS</option>
-                </select>
-
-				<hr />
-
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" placeholder="Please share any questions, comments, or feedback." required></textarea>
-
-				<!-- This button for deferral to OS mail client
-				<button type="submit">Submit</button>
-				-->
-				<!-- This button for entirely web-based/browser submission workflow -->
-				<button type="button" onclick="submitToAPI(event)">Submit</button>
-            </form>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 aeratliff.com. All rights reserved.</p>
-    </footer>
-
-	<!-- Tab Navigation -->
-    <script>
-        // Get all tab elements and content sections
-        const tabs = document.querySelectorAll('.tab');
-        const contents = document.querySelectorAll('.tab-content');
-
-        // Function to handle tab switching
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Remove the 'active' class from all tabs and content sections
-                tabs.forEach(t => t.classList.remove('active'));
-                contents.forEach(c => c.classList.remove('active'));
-
-                // Add 'active' class to the clicked tab and the corresponding content
-                tab.classList.add('active');
-                const contentId = tab.id.replace('-tab', '-content');
-                document.getElementById(contentId).classList.add('active');
-            });
-        });
-    </script>
-	
-    <!-- Jquery Scripts -->
-	<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-	
-	<!-- Send Contact SES Request -->
-	<script>
-		function submitToAPI(e) {
-			e.preventDefault();
-			var URL = "https://api.aeratliff.com/dev/MailForwardSES";
-
-			var affiliationregex = /[A-Za-z]{1}[A-Za-z]/;
-			if (!affiliationregex.test($("#affiliation").val())) {
-				 alert ("Please enter a valid affilition longer than 2 characters.");
-				return;
-			}
-			var nameregex = /[A-Za-z]{1}[A-Za-z]/;
-			if (!nameregex.test($("#name").val())) {
-				alert ("Please enter a valid name longer than 2 characters.");
-				return;
-			}
-			var phoneregex = /[0-9]{10}/;
-			if (!phoneregex.test($("#phone").val())) {
-				alert ("Please enter valid 10 digit phone number.");
-				return;
-			}
-			if ($("#email").val()=="") {
-				alert ("Please enter your email address.");
-				return;
-			}
-			var emailregex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
-			if (!emailregex.test($("#email").val())) {
-				alert ("Please enter valid email address in the format: account@domain.tld");
-				return;
-			}
-			if ($("#subject").val()=="") {
-				alert ("Please enter a subject.");
-				return;
-			}
-			if ($("#message").val()=="") {
-				alert ("Please enter a message.");
-				return;
-			}
-
-			var affiliation = $("#affiliation").val();
-			var name = $("#name").val();
-			var phone = $("#phone").val();
-			var email = $("#email").val();
-			var contactmethod = $("#contactmethod").val();
-			var subject = $("#subject").val();
-			var message = $("#message").val();
-			
-			var data = {
-				affiliation : affiliation,
-				name : name,
-				phone : phone,
-				email : email,
-				contactmethod : contactmethod,
-				subject : subject,
-				message : message
-			};
-
-			$.ajax({
-				type: "POST",
-				url : "https://api.aeratliff.com/dev/MailForwardSES",
-				dataType: "json",
-				crossDomain: "true",
-				contentType: "application/json; charset=utf-8",
-				data: JSON.stringify(data),
-
-				success: function () {
-					alert("Your message was successfully submitted!  Please allow 1-2 business days for review of your message.");
-					document.getElementById("contact").reset();
-					location.reload();
-				},
-				error: function () {
-				alert("There was a problem submitting your message!  Please try again in a different browser or disable your script blocker.  If you are still experiencing issues, e-mail directly to anthony@aeratliff.com.");
-				}
+					// Add 'active' class to the clicked tab and the corresponding content
+					tab.classList.add('active');
+					const contentId = tab.id.replace('-tab', '-content');
+					document.getElementById(contentId).classList.add('active');
+				});
 			});
-		}
-	 </script>
+		</script>
+		
+		<!-- Jquery Scripts -->
+		<script language="JavaScript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		
+		<!-- Send Contact SES Request -->
+		<!-- Linked Method start -->
+		<script src="assets/js/contact.js"></script>
+		<!-- Linked Method stop -->
+		<!-- Embedded Method start
+		<script>
+			function submitToAPI(e) {
+				e.preventDefault();
+				var URL = "https://api.aeratliff.com/dev/MailForwardSES";
 
-</body>
+				var affiliationregex = /[A-Za-z]{1}[A-Za-z]/;
+				if (!affiliationregex.test($("#affiliation").val())) {
+					 alert ("Please enter a valid affilition longer than 2 characters.");
+					return;
+				}
+				var nameregex = /[A-Za-z]{1}[A-Za-z]/;
+				if (!nameregex.test($("#name").val())) {
+					alert ("Please enter a valid name longer than 2 characters.");
+					return;
+				}
+				var phoneregex = /[0-9]{10}/;
+				if (!phoneregex.test($("#phone").val())) {
+					alert ("Please enter valid 10 digit phone number.");
+					return;
+				}
+				if ($("#email").val()=="") {
+					alert ("Please enter your email address.");
+					return;
+				}
+				var emailregex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,6})?$/;
+				if (!emailregex.test($("#email").val())) {
+					alert ("Please enter valid email address in the format: account@domain.tld");
+					return;
+				}
+				if ($("#subject").val()=="") {
+					alert ("Please enter a subject.");
+					return;
+				}
+				if ($("#message").val()=="") {
+					alert ("Please enter a message.");
+					return;
+				}
+
+				var affiliation = $("#affiliation").val();
+				var name = $("#name").val();
+				var phone = $("#phone").val();
+				var email = $("#email").val();
+				var contactmethod = $("#contactmethod").val();
+				var subject = $("#subject").val();
+				var message = $("#message").val();
+				
+				var data = {
+					affiliation : affiliation,
+					name : name,
+					phone : phone,
+					email : email,
+					contactmethod : contactmethod,
+					subject : subject,
+					message : message
+				};
+
+				$.ajax({
+					type: "POST",
+					url : "https://api.aeratliff.com/dev/MailForwardSES",
+					dataType: "json",
+					crossDomain: "true",
+					contentType: "application/json; charset=utf-8",
+					data: JSON.stringify(data),
+
+					success: function () {
+						alert("Your message was successfully submitted!  Please allow 1-2 business days for review of your message.");
+						document.getElementById("contact").reset();
+						location.reload();
+					},
+					error: function () {
+					alert("There was a problem submitting your message!  Please try again in a different browser or disable your script blocker.  If you are still experiencing issues, e-mail directly to anthony@aeratliff.com.");
+					}
+				});
+			}
+		 </script>
+		Embedded Method stop -->
+
+	</body>
 </html>

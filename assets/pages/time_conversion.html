@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aeratliff.com - Time Converter</title>
+	<!-- External CSS start -->
+	<link rel="stylesheet" href="../css/theme1.css">
+	<!-- External CSS stop -->
+</head>
+<body>
+    <div class="container">
+		<h1>Time Converter</h1>
+		<!-- Form -->
+		<form id="datetimefree" method="post">
+		
+			<label for="datetimepick1">Start Date/Time</label>
+			<input type="datetime-local" id="datetimepick1" name="datetimepick1">
+			
+			<label for="datetimepick1zone">State Date/Time Zone:</label>
+			<select id="datetimepick1zone" name="datetimepick1zone">
+				<option value="-12">UTC-12</option>
+				<option value="-11">UTC-11</option>
+				<option value="-10">UTC-10 (Hawaii)</option>
+				<option value="-9.5">UTC-9:30</option>
+				<option value="-9">UTC-9 (Anchorage)</option>
+				<option value="-8">UTC-8 (Pacific Time)</option>
+				<option value="-7">UTC-7 (Mountain Time)</option>
+				<option value="-6">UTC-6 (Central Time)</option>
+				<option value="-5">UTC-5 (Eastern Time)</option>
+				<option value="-4">UTC-4 (Atlantic Time)</option>
+				<option value="-3:.5">UTC-3:30 (Newfoundland Time)</option>
+				<option value="-3">UTC-3</option>
+				<option value="-2">UTC-2</option>
+				<option value="-1">UTC-1</option>
+				<option value="0">UTC</option>
+				<option value="1">UTC+1</option>
+				<option value="2">UTC+2</option>
+				<option value="3">UTC+3</option>
+				<option value="3.5">UTC+3:30</option>
+				<option value="4">UTC+4</option>
+				<option value="4.5">UTC+4:30</option>
+				<option value="5">UTC+5</option>
+				<option value="5.5">UTC+5:30</option>
+				<option value="5.75">UTC+5:45</option>
+				<option value="6">UTC+6</option>
+				<option value="6.5">UTC+6:30</option>
+				<option value="7">UTC+7 (Thailand)</option>
+				<option value="8">UTC+8 (China)</option>
+				<option value="8.75">UTC+8:45</option>
+				<option value="9">UTC+9 (Japan, Korea)</option>
+				<option value="9.5">UTC+9:30 (Australia-Adelaide)</option>
+				<option value="10">UTC+10 (Australia-Sydney/Melbourne/Brisbane)</option>
+				<option value="10.5">UTC+10:30</option>
+				<option value="11">UTC+11</option>
+				<option value="12">UTC+12</option>
+				<option value="12.75">UTC+12:45</option>
+				<option value="13">UTC+13</option>
+				<option value="14">UTC+14</option>
+			</select>
+
+			<label for="datetimepick2">Stop Date/Time</label>
+			<input type="datetime-local" id="datetimepick2" name="datetimepick2">
+			
+			<label for="datetimepick2zone">State Date/Time Zone:</label>
+			<select id="datetimepick2zone" name="datetimepick2zone">
+				<option value="-12">UTC-12</option>
+				<option value="-11">UTC-11</option>
+				<option value="-10">UTC-10 (Hawaii)</option>
+				<option value="-9.5">UTC-9:30</option>
+				<option value="-9">UTC-9 (Anchorage)</option>
+				<option value="-8">UTC-8 (Pacific Time)</option>
+				<option value="-7">UTC-7 (Mountain Time)</option>
+				<option value="-6">UTC-6 (Central Time)</option>
+				<option value="-5">UTC-5 (Eastern Time)</option>
+				<option value="-4">UTC-4 (Atlantic Time)</option>
+				<option value="-3:.5">UTC-3:30 (Newfoundland Time)</option>
+				<option value="-3">UTC-3</option>
+				<option value="-2">UTC-2</option>
+				<option value="-1">UTC-1</option>
+				<option value="0">UTC</option>
+				<option value="1">UTC+1</option>
+				<option value="2">UTC+2</option>
+				<option value="3">UTC+3</option>
+				<option value="3.5">UTC+3:30</option>
+				<option value="4">UTC+4</option>
+				<option value="4.5">UTC+4:30</option>
+				<option value="5">UTC+5</option>
+				<option value="5.5">UTC+5:30</option>
+				<option value="5.75">UTC+5:45</option>
+				<option value="6">UTC+6</option>
+				<option value="6.5">UTC+6:30</option>
+				<option value="7">UTC+7 (Thailand)</option>
+				<option value="8">UTC+8 (China)</option>
+				<option value="8.75">UTC+8:45</option>
+				<option value="9">UTC+9 (Japan, Korea)</option>
+				<option value="9.5">UTC+9:30 (Australia-Adelaide)</option>
+				<option value="10">UTC+10 (Australia-Sydney/Melbourne/Brisbane)</option>
+				<option value="10.5">UTC+10:30</option>
+				<option value="11">UTC+11</option>
+				<option value="12">UTC+12</option>
+				<option value="12.75">UTC+12:45</option>
+				<option value="13">UTC+13</option>
+				<option value="14">UTC+14</option>
+			</select>
+		
+			<label for="datetimeentry">Free-form Date/Time Entry:</label>
+			<textarea id="datetimeentry" name="datetimeentry" rows="30" placeholder="Enter date/time data & this script will attempt to parse values out of the input and convert them to the selected timezones & other timestamp formats such as Epoch, WebKit/Chromium, & LDAP/NT." required></textarea>
+
+			<br />
+			<!-- Web API submission (button) start -->
+			<button type="button" onclick="submitToAPI(event)">Submit</button>
+			<!-- Web API submission (button) stop -->
+		</form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 aeratliff.com. All rights reserved.</p>
+    </footer>
+</body>
+</html>
